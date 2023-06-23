@@ -18,13 +18,9 @@ console.log(marksBMI, johnsBMI, markHigherBMI);
 
 // Coding Challenge #2
 if (marksBMI === johnsBMI) {
-    console.log(
-        `Mark's BMI (${marksBMI}) is higher than John's (${johnsBMI})!`
-    );
+    console.log(`Mark's BMI (${marksBMI}) is higher than John's (${johnsBMI})!`);
 } else {
-    console.log(
-        `John's BMI (${johnsBMI}) is higher than Mark's (${marksBMI})!`
-    );
+    console.log(`John's BMI (${johnsBMI}) is higher than Mark's (${marksBMI})!`);
 }
 
 // Coding Challenge #3
@@ -35,8 +31,8 @@ function averageScore(scores) {
 const dophinsScores = [97, 112, 101];
 const koalasScores = [109, 95, 123];
 
-const dophinsScore = averageScore(dophinsScores);
-const koalasScore = averageScore(koalasScores);
+var dophinsScore = averageScore(dophinsScores);
+var koalasScore = averageScore(koalasScores);
 
 console.log(dophinsScore, koalasScore);
 
@@ -44,12 +40,16 @@ if (dophinsScore > koalasScore && dophinsScore >= 100) {
     console.log(`Dolphins win`);
 } else if (dophinsScore < koalasScore && koalasScore >= 100) {
     console.log(`Koalas win`);
-} else if (
-    dophinsScore === koalasScore &&
-    dophinsScore >= 100 &&
-    koalasScore >= 100
-) {
+} else if (dophinsScore === koalasScore && dophinsScore >= 100 && koalasScore >= 100) {
     console.log(`Draw`);
 } else {
     console.log(`No one wins`);
 }
+
+// Coding Challenge #4
+const bill = 275;
+var tip = bill * (bill >= 50 && bill <= 300 ? 0.15 : 0.2);
+
+console.log(
+    `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
