@@ -29,3 +29,16 @@ console.log(dolphinsScore, koalasScore);
 var teamsScore = [dolphinsScore, koalasScore];
 
 console.log(checkWinner(teamsScore));
+
+// Coding Challenge #2
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44];
+
+var tips = bills.map(calcTip);
+console.log(tips);
+
+var total = bills.map((bill, i) => bill + tips[i]);
+console.log(total);
