@@ -42,3 +42,44 @@ console.log(tips);
 
 var total = bills.map((bill, i) => bill + tips[i]);
 console.log(total);
+
+// Coding Challenge #3
+const mark = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        if (!this.BMI) {
+            this.BMI = this.height / this.mass ** 2;
+        }
+        return this.BMI;
+    },
+};
+
+const john = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        if (!this.BMI) {
+            this.BMI = this.height / this.mass ** 2;
+        }
+        return this.BMI;
+    },
+};
+
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log(
+        `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${
+            john.fullName
+        }'s (${john.calcBMI()})!`
+    );
+} else {
+    console.log(
+        `${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${
+            mark.fullName
+        }'s (${mark.calcBMI()})!`
+    );
+}
