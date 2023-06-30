@@ -83,3 +83,27 @@ if (mark.calcBMI() > john.calcBMI()) {
         }'s (${mark.calcBMI()})!`
     );
 }
+
+// Coding Challenge #4
+
+const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+var tips2 = [];
+var totals2 = [];
+
+for (let i = 0; i < bills2.length; i++) {
+    tips2.push(calcTip(bills2[i]));
+    totals2.push(bills2[i] + tips2[i]);
+}
+
+console.log(tips2);
+console.log(totals2);
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals2));
